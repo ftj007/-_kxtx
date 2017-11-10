@@ -1,12 +1,13 @@
+新建项目
 1. git init --建仓
 2. git add  * --添加代码到本地仓库（*是代码添加全部更新的）或git add -A
 3. git commit -m "first commit"  --提交到本地缓存（“引号里面是说明提交了什么东西”）对上传文件的描述。
-4. git remote add origin https://github.com/ftj007/-_kxtx.git  --提交到远程github上（后面的地址，就是之前配置的repository地址）
+4. git remote add origin https://github.com/ftj007/zdh-_kxtx.git  --提交到远程github上（后面的地址，就是之前配置的repository地址）
 5. git push -u origin master  --push到master分支
 
 克隆到本地
 
-git clone https://github.com/ftj007/-_kxtx.git
+git clone https://github.com/ftj007/zdh-_kxtx.git
 
 更新本代码
 
