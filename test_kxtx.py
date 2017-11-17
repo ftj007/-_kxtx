@@ -42,17 +42,55 @@ class KXTX(unittest.TestCase):
         driver.find_element_by_xpath('/html/body/div[1]/div/div[1]/div/ul/li[1]').click()
         sleep(5)
 
+
         iframe = driver.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[1]/iframe')
         driver.switch_to.frame(iframe)
 
-        # driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div[1]/div[2]/table/tbody/tr[1]/td[4]/span/span/a').click()
 
         # 选择所有的checkbox并全部勾上
+        # tr = driver.find_elements_by_xpath('//*[@id="content"]/div/div[1]/div[1]/div[2]/table/tbody/tr')
+        # print(len(tr))
 
-        for i in range(1,10):
-            checkbox = driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div[1]/div[2]/table/tbody/tr[%d]/td[1]' % i)
-            checkbox.click()
-            sleep(1)
+        # for i in range(1,len(tr)+1):
+        #     checkbox = driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div[1]/div[2]/table/tbody/tr[%d]/td[1]' % i)
+        #     checkbox.click()
+        #     sleep(1)
+
+        driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div[1]/div[2]/table/tbody/tr[1]/td[1]').click()
+
+        driver.find_element_by_xpath('//*[@id="content"]/form/div[2]/div/div[5]/div[3]/div/input').click()
+        sleep(1)
+        driver.find_element_by_xpath('//*[@id="tab_listOutSource"]/ul[6]/li[1]').click()
+        sleep(1)
+        driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div[1]/div[2]/table/tbody/tr[1]/td[8]/span/div/span').click()
+        sleep(5)
+
+
+        """释放掉所有iframe"""
+        driver.switch_to.default_content()
+        """再次进入iframe"""
+        driver.switch_to.frame('frame_c7a898f2-099a-4619-831f-cc113a112151')
+
+        # t = driver.find_elements_by_xpath('//*[@class="kx-ec-msg-dialog"]')
+        # print(len(t))
+
+        driver.find_element_by_xpath('/html/body/div[11]/div/div[3]/button').click()
+
+        # driver.switch_to.default_content()
+
+
+        frame = driver.find_element_by_xpath('/html/body/div[6]/div/div[2]/iframe')
+        driver.switch_to_frame('frame')
+
+        driver.find_element_by_xpath('//*[@id="endStationCode"]').click()
+        sleep(1)
+        driver.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[1]/ul/li[1]').click()
+        sleep(1)
+        driver.find_element_by_xpath('/html/body/div[3]/div/div[2]/ul/li[1]').click()
+        sleep(1)
+        driver.find_element_by_xpath('/html/body/div[3]/div/div[3]/ul/li[1]').click()
+        sleep(1)
+        driver.find_element_by_xpath('//*[@id="content"]/div[1]/div[1]/div[7]/div/input').click()
 
 
 
