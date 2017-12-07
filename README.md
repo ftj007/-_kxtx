@@ -22,3 +22,13 @@ git clone https://github.com/ftj007/zdh-_kxtx.git
 2. git commit -m "更新说明“ （commit只是提交到缓存区域）
 3. git pull（如果是多人同时开发维护代码，得先git pull ,拉取当前分支最新代码，其实就是先更新本地代码）
 4. git push origin master（最后一步才是push到远程的master分支上）
+
+
+实际上：def fun(n,*args):
+如果还原到普通函数就是这样的了：
+def fun(n,args):
+这是使用它的时候就是这样的：
+fun(12, ["xu", "yong", "quan"])
+*args在作为行参的时候，就表示，将这个集合拆分成若干个变量元素。这样就是：
+def fun(n, args[0],args[1],args[2]....).
+*args在作为实参（变量）的时候，也是拆分的意思
