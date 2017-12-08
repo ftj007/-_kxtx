@@ -32,3 +32,12 @@ fun(12, ["xu", "yong", "quan"])
 *args在作为行参的时候，就表示，将这个集合拆分成若干个变量元素。这样就是：
 def fun(n, args[0],args[1],args[2]....).
 *args在作为实参（变量）的时候，也是拆分的意思
+
+
+学习python不久，碰到个问题，怎么样把自己写的模块加入到python默认就有的搜索路径中呢？不要每次非得import sys; sys.path.append(‘/home/fightlikekobe/python’)才可。
+
+上网找了很多久未果，都来我自己糊里糊涂找到了解决方法，那就是在dist-packages（即/usr/local/lib/python2.7/dist-packages）添加一个路径文件，如mypkpath.pth，必须以.pth为后缀，写上你要加入的文件名称就是了，如我的：
+
+/home/fightlikekobe/python
+
+保存退出，OK！结果自己验证，重启terminal，再次打开python，

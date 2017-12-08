@@ -33,6 +33,6 @@ class Config:
 
 # URL = Config().get('URL')
 # print(URL)
-
+# print(LOG_PATH)
 
 
